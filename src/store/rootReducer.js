@@ -1,8 +1,8 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import counterReducer from './slices/counterSlice';
+import taskReducer from './slices/taskSlice';
 
 const rootReducer = combineReducers({
-  counter: counterReducer,
+  task: taskReducer,
 });
 
 export default rootReducer;

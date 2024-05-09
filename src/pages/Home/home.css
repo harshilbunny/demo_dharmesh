@@ -1,0 +1,140 @@
+/* ResponsiveForm.css */
+
+.responsive-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.responsive-form .form-group {
+    margin-bottom: 20px;
+}
+
+.responsive-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.responsive-form input[type="text"],
+.responsive-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.responsive-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.responsive-form button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tablink {
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+.active {
+    background-color: #ccc;
+}
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .responsive-form .form-group {
+        width: 100%;
+    }
+}
